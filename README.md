@@ -2,4 +2,4 @@
 
 Learning Docker with
 
-* [Docker and Kubernetes - the complete guide](https://www.udemy.com/docker-and-kubernetes-the-complete-guide)
+* [Docker and Kubernetes: The Complete Guide](https://www.udemy.com/docker-and-kubernetes-the-complete-guide)
