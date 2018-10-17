@@ -11,7 +11,7 @@ client.set('visits', 0);
 
 app.get('/', (req, res) => {
     client.get('visits', (err, visits) => {
-        res.send('Number of visits is ' + visits);
+        res.send('<br/><br/><br/><center><h1>Number of visits is ' + visits + '</h1></center>');
         client.set('visits', parseInt(visits) + 1);
     });
 });
