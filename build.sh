@@ -1,1 +1,1 @@
-docker build -t gerdreiss/$1:latest $1
+sudo docker build -t gerdreiss/$1:latest $1
