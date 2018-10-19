@@ -1,1 +1,1 @@
-sudo docker build .
+docker build -f $1 .

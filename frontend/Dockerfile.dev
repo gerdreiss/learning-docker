@@ -5,4 +5,7 @@ WORKDIR /app
 COPY ./package.json ./
 RUN npm config set strict-ssl false && npm install
 
+VOLUME ./src
+VOLUME ./public
+
 CMD ["npm", "run", "start"]
