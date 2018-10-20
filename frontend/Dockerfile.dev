@@ -2,10 +2,10 @@ FROM node:alpine
 
 WORKDIR /app
 
-COPY ./package.json ./
+COPY package.json .
 RUN npm config set strict-ssl false && npm install
 
-VOLUME ./src
-VOLUME ./public
+COPY public .
+COPY src .
 
 CMD ["npm", "run", "start"]
