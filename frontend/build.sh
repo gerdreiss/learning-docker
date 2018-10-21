@@ -1,1 +1,0 @@
-docker build -f $1 .
