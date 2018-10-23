@@ -9,13 +9,14 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Hello there from AWS Elastic Beanstalk!<br/>
+            To learn how to deploy dockerized apps to AWS Elastic Beanstalk, 
           </p>
-          <p>Click <a
+          <p>click <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://www.udemy.com/docker-and-kubernetes-the-complete-guide"
             target="_blank"
-            rel="noopener noreferrer">here</a> to learn ReactJS</p>
+            rel="noopener noreferrer">here</a>.</p>
         </header>
       </div>
     );

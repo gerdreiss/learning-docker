@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t gerdreiss/frontend -f Dockerfile.dev .
+
+script:
+  - docker run gerdreiss/frontend npm run test -- --coverage
+
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "eu-west-1"
+#  app: "frontend-in-a-docker"
+#  env: "FrontendInADocker-env"
+#  bucket_name: "elasticbeanstalk-eu-west-1-967202316134"
+#  bucket_path: "frontend-in-a-docker"
+#  on:
+#    branch: master
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key:
+#    secure: "$AWS_SECRET_KEY"
