@@ -10,6 +10,6 @@ before_install:
 
 script:
   - docker run gerdreiss/frontend npm run test -- --coverage
-  - docker run gerdreiss/complex/client npm run test -- --coverage
-  - docker run gerdreiss/complex/server npm run test -- --coverage
-  - docker run gerdreiss/complex/worker npm run test -- --coverage
+#  - docker run gerdreiss/complex/client npm run test -- --coverage
+#  - docker run gerdreiss/complex/server npm run test -- --coverage
+#  - docker run gerdreiss/complex/worker npm run test -- --coverage
