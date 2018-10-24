@@ -1,0 +1,23 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t gerdreiss/complex/client-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run gerdreiss/complex/client-test npm test -- --coverage
+
+after_success:
+  # build production images
+  - docker build -t gerdreiss/complex/client ./client
+  - docker build -t gerdreiss/complex/nginx ./nginx
+  - docker build -t gerdreiss/complex/server ./server
+  - docker build -t gerdreiss/complex/worker ./worker
+  # log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # push the images to docker hub
+  - docker push gerdreiss/complex/client
+  - docker push gerdreiss/complex/nginx
+  - docker push gerdreiss/complex/server
+  - docker push gerdreiss/complex/worker
